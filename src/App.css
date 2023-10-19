@@ -1,11 +1,9 @@
 
-*{
-  /* background-color: #b8c1c2; */
-}
+
 #root{
   background-color: #b8c1c2;
   padding-top: 20px;
-  /* min-height: 98vh; */
+  min-height: 98vh;
   /* min-height: 297vh; */
 }
 .App{
@@ -17,3 +15,4 @@ a{
   color: black;
   text-decoration: none !important;
 }
+
