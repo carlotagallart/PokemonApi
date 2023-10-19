@@ -2,19 +2,28 @@ import { useEffect, useState } from "react";
 // importem axios
 import axios from 'axios';
 import "./App.css";
+import "./styles/cardColumn.css";
+import "./styles/cardList.css";
+import "./styles/singleCard.css";
+import "./styles/navComponents.css";
 // importem els components
 import CardColumn from "./components/cardColumn";
 import CardList from "./components/cardList";
 // npm + importem fontawesome + icones 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGrip, faList, faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+
+
 function App() {
+
   const [active, setActive] = useState(true);
   const [loading, setLoading] = useState(false)
   const [pokemonInfo, setPokemonInfo] = useState([]);
   const [urlApi, setUrlApi] = useState('https://pokeapi.co/api/v2/pokemon/');
   const [nextPage, setNextPage] = useState();
   const [prevPage, setPrevPage] = useState();
+
 
   useEffect(() => {
     setLoading(true);
@@ -42,27 +51,32 @@ function App() {
 
   }, [urlApi]);
 
-
-  
   return (
     <div className="App">
+      <div className="nav-grip">
       <button onClick={() => setActive(!active)} disabled={active}>
         <FontAwesomeIcon icon={faGrip} />
       </button>
       <button onClick={() => setActive(!active)} disabled={!active}>
         <FontAwesomeIcon icon={faList} />
       </button>
-      
-      {(active && <CardColumn pokemonInfo={pokemonInfo} />) || (!active && <CardList />)}
+      </div>
+      {(active && <CardColumn pokemonInfo={pokemonInfo} />) || (!active && <CardList pokemonInfo={pokemonInfo} />)}
       {/* mirem que tingui url de prev o next si te la mostrem si no te no ho mostem */}
+      <div className="nav-arrows">
       {prevPage && <button onClick={()=>{
         setUrlApi(prevPage)
       }
       }> <FontAwesomeIcon icon={faArrowLeft} /></button>}
-      {nextPage && <button onClick={()=>{
+            {nextPage && <button onClick={()=>{
         setUrlApi(nextPage)
       }
-      }> <FontAwesomeIcon icon={faArrowRight} /></button>}
+      }> <FontAwesomeIcon icon={faArrowRight} /></button>}      
+      </div>
+
+
+
+
     </div>
   );
 }

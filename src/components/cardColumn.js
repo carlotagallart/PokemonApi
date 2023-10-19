@@ -3,17 +3,21 @@ import { Link } from 'react-router-dom'
 
 export default function CardColumn({pokemonInfo}) {
   return(
-    <div>
+    <div className="container-pokemons">
         {
             pokemonInfo.map(pokemon =>{
+                const img = pokemon.sprites.other.dream_world.front_default;
                return (
-                <Link to={`/pokemon/${pokemon.id}`}>
-               <div key={pokemon.id}>
-                <p>{pokemon.name}</p>
-                <img src={pokemon.sprites.other.dream_world.front_default} />
-               </div>
-               </Link>
-
+                
+                <div key={pokemon.id} className="card">
+                    <Link to={`/pokemon/${pokemon.id}`}>
+                    <div className="img-card" style={ {backgroundImage: `url(${img})`}}></div>
+                    <div className="container-text">
+                    <p>{pokemon.name}</p> 
+                    </div>
+                    </Link>
+                </div>
+               
                )
             })
         }

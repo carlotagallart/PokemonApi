@@ -1,0 +1,32 @@
+.nav-grip, .nav-arrows{
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.nav-grip button, .nav-arrows button{
+    margin: 5px;
+    color: rgb(101, 97, 97);
+}
+
+button:disabled{
+    color: rgb(136, 134, 134)
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+}
+
+  /* Desktop CSS */
+  @media (min-width: 1281px) {
+    
+    .nav-grip{
+
+        text-align: end;
+        
+    }
+    
+  }

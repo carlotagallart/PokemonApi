@@ -1,0 +1,53 @@
+.container-pokemons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #ffffff63;
+    margin: 2px 2px 2px 2px;
+    padding: 15px 5px 15px 5px;
+    width: 50%;
+    border: 1px solid black;
+    width: 60%;
+  }
+  
+  .img-card{
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    height: 100px;
+    width: 100%;
+  }
+  
+  .container-text{
+    margin-top: 15px;
+    border-top: 1px solid black;
+    text-align: center;
+  }
+  
+  /* ipad Css */
+  @media (min-width: 700px) and (max-width: 1180px) {
+    .container-pokemons{
+      justify-content:start !important;
+    }
+    .card{
+      margin: 4px 4px 0px 4px;
+      width: 30% !important;
+    }
+  }
+  
+  /* Desktop CSS */
+  @media (min-width: 1281px) {
+    
+    .card{
+      margin: 6px 4px 0px 4px;
+      width: 23% !important;
+    }
+    
+  }
+
+  

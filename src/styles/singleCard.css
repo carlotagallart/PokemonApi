@@ -1,0 +1,87 @@
+.container-single{ 
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.nav-back{
+    padding-top: 57%;
+    padding-bottom: 30px;
+    width: 85%;
+    display: flex;
+  
+}
+.back-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: rgb(101, 97, 97);
+}
+.container-text{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+.card-single{
+    background-color: #ffffff63;
+    margin: 2px 2px 2px 2px;
+    padding: 15px 5px 15px 5px;
+    width: 50%;
+    border: 1px solid black;
+    width: 80%;
+}
+
+.img-card-single{
+    width: 90%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    height: 209px;
+    /* width: 100%; */
+}
+
+/* ipad Css */
+@media (min-width: 700px) and (max-width: 1180px) {
+    .container-pokemons{
+      justify-content:start !important;
+    }
+
+    .img-card-single {
+        height: 333px !important;
+    }
+    .card-single{
+        width: 69%;
+    }
+    .container-text{
+        margin: 30px;
+        font-size: 16px;
+    }
+    .nav-back{
+        padding-top: 15% ;
+    }
+  }
+  
+  /* Desktop CSS */
+  @media (min-width: 1281px) {
+    
+    .container-single{
+        margin: 50px auto;
+        width: 35%;
+  
+    }
+    .img-card-single {
+        height: 333px !important;
+    }
+    .container-text{
+        margin: 30px;
+        font-size: 16px;
+    }
+    .nav-back {
+        padding-top: 2% !important;
+    }
+    
+  }
