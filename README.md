@@ -1,8 +1,8 @@
 # PokemonAPI
 
 ## Executar el projecte
-
-# `npm start`
+### `npm install`
+### `npm start`
 
 
 ### Exercici
