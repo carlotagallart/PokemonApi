@@ -9,11 +9,11 @@ export default function CardColumn({pokemonInfo}) {
                 const img = pokemon.sprites.other.dream_world.front_default;
                return (
                 
-                <div key={pokemon.id} className="card">
+                <div key={pokemon.id} className="card" id={`${pokemon.name}`} >
                     <Link to={`/pokemon/${pokemon.id}`}>
                     <div className="img-card" style={ {backgroundImage: `url(${img})`}}></div>
                     <div className="container-text">
-                    <p>{pokemon.name}</p> 
+                    <p data-testid="test-name">{pokemon.name}</p> 
                     </div>
                     </Link>
                 </div>

@@ -8,7 +8,7 @@ export default function cardList({pokemonInfo}) {
             const img = pokemon.sprites.other.dream_world.front_default;
            return (
             
-            <div key={pokemon.id} className="list-container">
+            <div key={pokemon.id} className="list-container" id={`${pokemon.name}`}>
                 <Link to={`/pokemon/${pokemon.id}`} className="card-list">
                 <div className="img-card-list" style={ {backgroundImage: `url(${img})`}}></div>
                 <div className="container-text-list">
